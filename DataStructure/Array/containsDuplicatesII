@@ -1,0 +1,27 @@
+/*219. Contains Duplicate II
+Description: 
+Given an integer array nums and an integer k, return true if there
+are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+Language used : C#
+
+*/
+
+/*Naive approach: Produce the correct output but exceeds time limit of leetcode 
+
+public class Solution {
+    public bool ContainsNearbyDuplicate(int[] nums, int k) {
+        //Array.Sort(nums);
+        for(int i=0; i<nums.Length-1; ++i){
+            for(int j=i+1; j<nums.Length; j++){
+                if(Math.Abs(i-j)<=k& nums[i]==nums[j]){
+                return true; 
+                }  
+            }
+        }
+        return false; 
+        
+    }
+}
+*/
+
