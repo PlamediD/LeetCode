@@ -1,0 +1,60 @@
+/*
+Description: 
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+
+Constraints:
+
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+*/
+
+/*
+Languge used: C#
+
+Algo: check that both s and t are the same lenght. If they are not, we automaticaly know that it is false
+(since all letters of s should appear in s at least once. So if they are different size, it means that one or more letters are missing) 
+If they are the same length, then create two arrays. One with letters from string s and the other from string t. 
+Sort those arrays, then compare them. If they contain exactly the same letters when sorted, then they are anagram. 
+if tt is an anagram of ss, sorting both strings will result in two identical strings
+
+Runtime: 90 ms, faster than 82.34% of C# online submissions for Valid Anagram.
+Memory Usage: 39.2 MB, less than 36.06% of C# online submissions for Valid Anagram.
+
+Time complexity: O(n log n) 
+n is the length of either s or t( they are supposed to be the same length). 
+Sorting is O( n log n) 
+Comparision is O(n) 
+O(n log n )>O(n)==> O(n log n) 
+Space complexity: ... 
+
+*/
+
+//Code below : 
+public class Solution {
+    public bool IsAnagram(string s, string t) {
+        if(s.Length!=t.Length){
+            return false; 
+        }
+        
+        char[] str1= s.ToCharArray(0,s.Length);
+        char[] str2= t.ToCharArray(0,t.Length);
+        Array.Sort(str1);
+        Array.Sort(str2);
+        
+        return  str1.SequenceEqual(str2);
+        
+    }
+}
