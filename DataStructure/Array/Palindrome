@@ -15,7 +15,7 @@ Explanation: "amanaplanacanalpanama" is a palindrome.
 */
 /* First solution: I came up with it on my own
 -Create a new string( empty string) : Pali 
-- traverse teh given string and everytime an element is a letter or a digit, add it to the new string
+- traverse the given string and everytime an element is a letter or a digit, add it to the new string
 - convert all element in pali to lowercase 
 - use two pointers ( left and right/ start and end ) to traverse the string
 - left start at 0 and increases, right starts at lenght-1 and decreases
