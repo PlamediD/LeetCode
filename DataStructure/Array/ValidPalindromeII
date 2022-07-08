@@ -23,7 +23,7 @@ Output: false
 Language used: C#
 Algo: 
 
-Create a helper function checkPalindrome that takes a string s, and two pointers i and j. 
+Create a helper function checkPalindrome that takes a string s, and two pointers( int) i and j. 
 This function returns a boolean indicating if s.substring(i, j) is a palindrome. 
 checkPalidrome uses the logic I used I used previously 
 
@@ -48,6 +48,11 @@ public class Solution {
         }
         return true; 
     }
+    
+    abbba
+    left = a
+    right = a
+    
         
         public bool ValidPalindrome(string s) {
             int i=0; 
