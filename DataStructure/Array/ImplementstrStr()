@@ -19,6 +19,9 @@ Output: -1
 Level: Easy 
 */
 
+
+DEVELOP YOUR OWN SOLUTION 
+DO NOT USE IndexOf( built -in functions) 
 /* Language used: C#
 Algo: 
 Check if needle is empty. If it is return 0
