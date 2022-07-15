@@ -1,0 +1,45 @@
+/*
+Longest Common Prefix
+Description: 
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+
+Example 1:
+
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+Example 2:
+
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.
+*/
+
+//Language used: C#
+//Space complexity: O(1), no extra space needed 
+//Time complexity: 
+//Algo: Check if the given string is empty, if it is return ""
+//Else,create a new string ( prefix) and save element at index 0 from strs( the given string) 
+//starts a for loop at index 1 and find at each iteration i the longest common prefix of strings 
+// if it encounters an empty string, the algorithm ends.
+
+
+//Code below:
+public class Solution {
+    public string LongestCommonPrefix(string[] strs) {
+        if(strs.Length==0){ return "";}
+        
+        string prefix=strs[0];
+        for(int i=1; i<strs.Length;i++){
+            while(strs[i].IndexOf(prefix)!=0){
+                prefix=prefix.Substring(0,prefix.Length-1);
+                if(prefix.Length==0){
+                    return "";
+                }
+            }
+        }
+        return prefix;
+    }
+}
