@@ -29,7 +29,9 @@ Space: O(1)
 
 public class Solution {
     public int StrStr(string haystack, string needle) {
-        if(string.IsNullOrEmpty(needle)){ return 0;}
+        if(string.IsNullOrEmpty(needle)){ 
+            return 0;
+        }
         for(int i=0; i<=haystack.Length-needle.Length;i++){
             for(int j=0; j<needle.Length & haystack[i+j]==needle[j];j++){
                 if(j==needle.Length-1){ return i;}
@@ -39,6 +41,12 @@ public class Solution {
         return -1;
     }
 }
+
+hay: hello
+needle: ll
+i=0; i=5-2= 3
+j=0; j=2; 
+hay[0+0]=
 /* Language used: C#
 Algo: 
 Check if needle is empty. If it is return 0
