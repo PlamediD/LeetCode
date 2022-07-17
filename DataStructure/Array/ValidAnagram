@@ -130,12 +130,13 @@ public class Solution {
         // character by 1 to indicate that current
         // character has been already counted .
           
+          
+          //ELSE CASEEEEEEEEEEEEEEEEEEEEEEEEEEEE
         // at the end, we will to check if the last count of
         // all characters in last is zero which
         // means all characters in String s are
         // present in String t
-        map[t[i]]=
-          map[t[i]] - 1;
+        map[t[i]]=map[t[i]] - 1;
       }
     }
          // Extract all keys of Dictionary/map
