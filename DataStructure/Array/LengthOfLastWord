@@ -36,7 +36,9 @@ public class Solution {
         int i = s.Length - 1;
         
         while (i >-1 && s[i] == ' ')
+        {
             i--;
+         }
         
         //count the length of the last word starting from its last character
         //increment result by 1 each time 
